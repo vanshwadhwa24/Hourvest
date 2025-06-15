@@ -8,6 +8,8 @@ import OAuthSuccess from "./OAuthSuccess";
 import ChatPage from "./chat/ChatPage";
 import Home from "./home";
 import AIChatPage from "./aichat";
+import Proposals from "./Proposals";
+import ProposeForm from "./ProposeForm";
 
 
 function App() {
@@ -34,6 +36,9 @@ function App() {
         <Route path="/chat" element={<ChatPage user={user} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/aichat" element={<AIChatPage user={user} />} />
+        <Route path="/proposals" element={<Proposals/>} />
+        <Route path="/propose-form/:receiverId" element={<ProposeForm />} />
+        {/* Add more routes as needed */}
       </Routes>
     </Router>
   );

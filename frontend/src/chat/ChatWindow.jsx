@@ -98,28 +98,36 @@ const ChatWindow = ({ currentChat, user }) => {
 
   return (
     <div className="chat-window">
-      <div className="message-area">
-        {messages.map((msg, i) => (
-          <MessageBubble
-            key={i}
-            message={msg}
-            isMine={
-              (typeof msg.sender === "object" ? msg.sender._id : msg.sender) ===
-              user._id
-            }
-          />
-        ))}
-        <div ref={bottomRef} />
-      </div>
-      <div className="send-box">
-        <input
-          value={newMsg}
-          onChange={(e) => setNewMsg(e.target.value)}
-          placeholder="Type a message"
-        />
-        <button onClick={handleSend}>Send</button>
-      </div>
-    </div>
+  {/* Star layers */}
+  <div className="stars"></div>
+  <div className="stars2"></div>
+  <div className="stars3"></div>
+
+  {/* Main chat content */}
+  <div className="message-area">
+    {messages.map((msg, i) => (
+      <MessageBubble
+        key={i}
+        message={msg}
+        isMine={
+          (typeof msg.sender === "object" ? msg.sender._id : msg.sender) ===
+          user._id
+        }
+      />
+    ))}
+    <div ref={bottomRef} />
+  </div>
+
+  <div className="send-box">
+    <input
+      value={newMsg}
+      onChange={(e) => setNewMsg(e.target.value)}
+      placeholder="Type a message"
+    />
+    <button onClick={handleSend}>Send</button>
+  </div>
+</div>
+
   );
 };
 

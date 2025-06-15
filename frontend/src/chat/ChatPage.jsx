@@ -24,7 +24,7 @@ const ChatPage = ({ user }) => {
 
   return (
     <div className="chat-page">
-      <ChatList user={user} setCurrentChat={setCurrentChat} />
+      <ChatList user={user} setCurrentChat={setCurrentChat} currentChat={currentChat} />
       <ChatWindow user={user} currentChat={currentChat} />
     </div>
   );

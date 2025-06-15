@@ -66,6 +66,16 @@ const Signup = () => {
       </form>
 
       <button
+        style={{
+          marginTop: "20px",
+          padding: "10px 20px",
+          backgroundColor: "#facc15",
+          color: "black",
+          border: "none",
+          borderRadius: "8px",
+          fontWeight: "bold",
+          cursor: "pointer",
+        }}
         onClick={() => {
           window.location.href = "http://localhost:5000/auth/google";
         }}

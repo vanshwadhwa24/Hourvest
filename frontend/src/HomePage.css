@@ -209,3 +209,42 @@
   outline: none;
   box-shadow: 0 0 8px #facc15;
 }
+
+.chat-btn {
+  background-color: #facc15;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+.chat-btn:hover {
+  background-color: #e0b20c;
+}
+
+.sidebar-btn {
+  background: transparent;
+  border: 1px solid #facc15;
+  background-color: #facc15;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.sidebar-btn:hover {
+  background-color: #1e293b;
+  color: #facc15;
+}
+

@@ -55,7 +55,7 @@ app.get(
 
 // Step 2: Handle callback from Google
 app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login-failure' }),
+  passport.authenticate('google', { failureRedirect: 'http://localhost:3000/signup' }),
   (req, res) => {
     console.log("✅ Google user:", req.user);  // TEMP DEBUG LOG
     const token = req.user?.token;
